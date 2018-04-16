@@ -62,7 +62,9 @@ fi
 echo "$(uname) ${OS}"
   
 if type elixir >/dev/null 2>&1; then
+  echo ""
   echo "Info: Elixir can be successfully installed."
+  echo ""
   echo "$ elixir --version"
   elixir --version
   exit 0

@@ -9,7 +9,7 @@ fi
 if [ "$(uname)" == 'Darwin' ]; then
   OS='Mac'
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
-  issue="$(cut -f -1 -d /etc/issue)"
+  issue="$(cut -f -1 -d ' ' /etc/issue)"
   if [ ${issue} = 'Raspbian' ]; then
     OS='Raspbian'
   elif [ ${issue} = 'Ubuntu' ]; then

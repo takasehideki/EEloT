@@ -1,5 +1,6 @@
 if type elixir >/dev/null 2>&1; then
   echo "Info: Elixir has been installed on your system."
+  echo ""
   echo "$ elixir --version"
   elixir --version
   exit 0
@@ -9,9 +10,9 @@ if [ "$(uname)" == 'Darwin' ]; then
   OS='Mac'
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   issue="$(cat /etc/issue)"
-  if [ "$(expr substr ${issue} 1 8)" == 'Raspbian' ]; then
+  if [ "$(echo ${issue} | grep -e 'Raspbian' ]; then
     OS='Raspbian'
-  elif [ "$(expr substr ${issue} 1 6)" == 'Ubuntu' ]; then
+  if [ "$(echo ${issue} | grep -e 'Ubuntu' ]; then
     OS='Ubuntu'
   else
     echo "Error: Your OS (${issue}) is not supported."

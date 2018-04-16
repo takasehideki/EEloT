@@ -10,9 +10,9 @@ if [ "$(uname)" == 'Darwin' ]; then
   OS='Mac'
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   issue="$(cat /etc/issue)"
-  if [ $(echo ${issue} | grep -e "Raspbian") ]; then
+  if [ $(echo ${issue} | grep -e "Raspbian") ]; ||
     OS='Raspbian'
-  elif [ $(echo ${issue} | grep -e "Ubuntu") ]; then
+  elif [ $(echo ${issue} | grep -e "Ubuntu") ]; ||
     OS='Ubuntu'
   else
     echo "Error: Your OS (${issue}) is not supported."
@@ -26,7 +26,7 @@ else
 fi
 
 
-echo "Info: The script will install Elixir on your system."
+echo "Info: Elixir will be installed on your ${OS} system."
 echo "Info: Some command will be done by sudo."
 
 if [ "${OS}" == 'Mac' ]; then

@@ -9,10 +9,10 @@ fi
 if [ "$(uname)" == 'Darwin' ]; then
   OS='Mac'
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
-  issue="$(cat /etc/issue)"
-  if [ $(echo ${issue} | grep -e "Raspbian") ]; ||
+  issue="$(cut -f -1 -d /etc/issue)"
+  if [ ${issue} = 'Raspbian' ]; then
     OS='Raspbian'
-  elif [ $(echo ${issue} | grep -e "Ubuntu") ]; ||
+  elif [ ${issue} = 'Ubuntu' ]; then
     OS='Ubuntu'
   else
     echo "Error: Your OS (${issue}) is not supported."

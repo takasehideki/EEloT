@@ -1,8 +1,8 @@
-"""
-This source is written by takatoh on his blog
-See following link:
-http://blog.panicblanket.com/archives/3450
-"""
+#---
+# This source is written by takatoh on his blog
+# See following link:
+# http://blog.panicblanket.com/archives/3450
+#---
 defmodule Fibonacci do
 
   def fib(n), do: IO.inspect fib_iter(0, 1, n, 1)

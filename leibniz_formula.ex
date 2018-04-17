@@ -1,8 +1,8 @@
-"""
-This source is written by @twinbee on Qiita
-See following link:
-https://qiita.com/hanada/items/c91788bcac2a40f1bb05#comment-b69e6585e1b86b5c03f7
-"""
+#---
+# This source is written by @twinbee on Qiita
+# See following link:
+# https://qiita.com/hanada/items/c91788bcac2a40f1bb05#comment-b69e6585e1b86b5c03f7
+#---
 defmodule LeibnizFormula do
   def calc() do
     s = 0..100_000_000

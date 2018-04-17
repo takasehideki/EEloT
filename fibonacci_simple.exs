@@ -3,7 +3,7 @@
 # See following link:
 # http://blog.panicblanket.com/archives/3450
 #---
-defmodule Fibonacci do
+defmodule FibonacciSimple do
 
   def fib(n), do: IO.inspect fib_iter(0, 1, n, 1)
 

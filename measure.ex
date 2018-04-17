@@ -1,6 +1,6 @@
 defmodule Measure do
   @module_list [[LeibnizFormula, :calc, []], 
-                [Fibonacci, :fib, [100000]]]
+                [FibonacciSimple, :fib, [100000]]]
   #@module_list [[Fibonacci, :fib, [100000]]]
 
   def start do

@@ -12,16 +12,17 @@ elixirc fibonacci_simple.ex
 elixirc fibonacci_process.ex
 
 git clone https://github.com/enpedasi/elixir_agg_csv.git
+cd elixir_agg_csv/
 mix deps.get
 mix compile
-cd ..
+cd ../
 
 git clone https://github.com/enpedasi/fukuokaex5_csv.git
-cd elixir_agg_csv/
-7z x ../fukuokaex5_csv/test_300000.7z
-7z x ../fukuokaex5_csv/test_3_000_000.7z
+7z x fukuokaex5_csv/test_300000.7z elixir_agg_csv/
+7z x fukuokaex5_csv/test_3_000_000.7z elixir_agg_csv/
 
 git clone https://github.com/mroth/phoenix-showdown.git
 cd phoenix-showdown/phoenix/benchmarker
 mix deps.get
 mix deps.compile
+cd ../

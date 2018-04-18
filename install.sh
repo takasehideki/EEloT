@@ -1,4 +1,4 @@
-if type elixir >/dev/null 2>&1; then
+if which elixir >/dev/null 2>&1; then
   echo "Info: Elixir has been installed on your system."
   echo ""
   echo "$ elixir --version"
@@ -30,10 +30,10 @@ echo "Info: Elixir will be installed on your ${OS} system."
 echo "Info: Some command will be done by sudo."
 
 if [ "${OS}" == 'Mac' ]; then
-  if type brew >/dev/null 2>&1; then
+  if which brew >/dev/null 2>&1; then
     echo "$ brew install elixir"
     brew install elixir
-  elif type port >/dev/null 2>&1; then
+  elif which port >/dev/null 2>&1; then
     echo "$ sudo port install elixir"
     sudo port install elixir
   else
@@ -61,7 +61,7 @@ fi
 
 echo "$(uname) ${OS}"
   
-if type elixir >/dev/null 2>&1; then
+if which elixir >/dev/null 2>&1; then
   echo ""
   echo "Info: Elixir can be successfully installed."
   echo ""

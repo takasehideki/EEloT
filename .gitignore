@@ -1,1 +1,5 @@
 Elixir.*.beam
+
+elixir_agg_csv/
+fukuokaex5_csv/
+phoenix-showdown/

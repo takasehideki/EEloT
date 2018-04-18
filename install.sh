@@ -111,7 +111,8 @@ if [ $# -eq 1 ] && [ $1 == 'source' ]; then
   echo "Warn: Some command will be done by sudo."
 
   if [ "${OS}" == 'Mac' ]; then
-    ;
+    echo ""
+
   elif [ "${OS}" == 'Raspbian' ]; then
     echo "Info: Install Erlang environment"
     sudo apt-get install erlang-nox erlang-dev

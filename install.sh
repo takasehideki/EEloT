@@ -111,30 +111,36 @@ if [ $# -eq 1 ] && [ $1 == 'source' ]; then
   echo "Info: Elixir will be built and installed on your ${OS} system from source."
   echo "Warn: Some command will be done by sudo."
 
+  echo "$ mkdir -p /usr/local/src && cd /usr/local/src"
+  mkdir -p /usr/local/src && cd /usr/local/src/
+ 
   if [ "${OS}" == 'Mac' ]; then
     echo ""
 
-  elif [ "${OS}" == 'Raspbian' ]; then
-    echo "Info: Install Erlang environment by Package manager"
-    sudo apt-get install erlang-nox erlang-dev
+  elif [ "${OS}" == 'Raspbian' ] ||
+    [ "${OS}" == 'Ubuntu' ]; then
+    sudo apt-get remove erlang-nox erlang-dev
 
-  elif [ "${OS}" == 'Ubuntu' ]; then
     echo "Info: Install Erlang environment from source"
-    cd ../
+    sudo apt-get install libncurses5-dev libssl-dev
     wget http://erlang.org/download/otp_src_20.3.tar.gz
     tar xzvf otp_src_20.3.tar.gz
     cd otp_src_20.3/
+    echo "./configure --enable-hipe"
     ./configure --enable-hipe
+    echo "$ make"
     make
+    echo "$ sudo make install"
     sudo make install
+    cd ../
 
   else
     echo "Error: Your platform ($(uname -a)) is not supported."
     exit 1
   fi
 
-  git clone https://github.com/elixir-lang/elixir.git ../elixir_src
-  cd ../elixir_src
+  git clone https://github.com/elixir-lang/elixir.git
+  cd elixir/
   git checkout v1.6
   echo "$ make clean test"
   make clean test

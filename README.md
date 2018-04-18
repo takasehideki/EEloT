@@ -140,8 +140,7 @@ We have already tested and evaluated on the following IoT boards.
 |Mac|High Sierra| 7.584 | 2.260 | 3.065 |
 [unit: second]
 
-NOTE: ZYBO could not run fibonacci_simple due to memory limitation.  
-(`eheap_alloc: Cannot allocate 220742620 bytes of memory (of type "old_heap").`)
+NOTE: ZYBO could not run fibonacci_simple due to memory limitation. (`eheap_alloc: Cannot allocate 220742620 bytes of memory (of type "old_heap").`)
 
 ### elixir_agg_csv
 
@@ -169,7 +168,7 @@ NOTE: ZYBO could not run fibonacci_simple due to memory limitation.
 
 ## License
 
-Basically [MIT License](https://opensource.org/licenses/MIT){:target="_blank"}, but the copyright of `*.ex` files is attributed to developers of code. See the detail for comment out of code.
+Basically [MIT License](https://opensource.org/licenses/MIT), but the copyright of `*.ex` files is attributed to developers of code. See the detail for comment out of code.
 
 ## Related links
 

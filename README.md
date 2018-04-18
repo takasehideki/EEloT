@@ -138,6 +138,7 @@ We have already tested and evaluated on the following IoT boards.
 |ODROID-XU3|Ubuntu| 50.749 | 7.858 | 6.958 |
 |ZYBO|Ubuntu| 159.950 | --- | 41.793 |
 |MacBook Pro|High Sierra| 7.584 | 2.260 | 3.065 |
+
 [unit: second]
 
 NOTE: ZYBO could not run fibonacci_simple due to memory limitation. (`eheap_alloc: Cannot allocate 220742620 bytes of memory (of type "old_heap").`)
@@ -151,6 +152,7 @@ NOTE: ZYBO could not run fibonacci_simple due to memory limitation. (`eheap_allo
 |ODROID-XU3|Ubuntu| 4.704 | 46.552 |
 |ZYBO|Ubuntu| 30.170 | 285.469 |
 |MacBook Pro|High Sierra| 1.958 | 22.798 |
+
 [unit: second]
 
 

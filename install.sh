@@ -52,7 +52,7 @@ if [ $# -eq 1 ] && [ $1 == 'clean' ]; then
     sudo apt remove elixir
   elif [ "${OS}" == 'Ubuntu' ]; then
     echo "Info: Uninstall Elixir"
-    sudo apt-get uninstall elixir
+    sudo apt-get remove elixir
   else
     echo "Error: Your platform ($(uname -a)) is not supported."
     exit 1

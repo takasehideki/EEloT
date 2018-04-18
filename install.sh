@@ -95,7 +95,6 @@ if [ $# -eq 0 ]; then
     #sudo apt-get install esl-erlang
     echo "Info: Install Elixir"
     sudo apt-get install elixir
-    rm -f erlang-solutions_1.0_all.deb
 
   else
     echo "Error: Your platform ($(uname -a)) is not supported."
@@ -119,8 +118,8 @@ if [ $# -eq 1 ] && [ $1 == 'source' ]; then
 
   elif [ "${OS}" == 'Ubuntu' ]; then
     echo "Info: Install Erlang environment from source"
-    wget http://erlang.org/download/otp_src_20.3.tar.gz ../
     cd ../
+    wget http://erlang.org/download/otp_src_20.3.tar.gz
     tar xzvf otp_src_20.3.tar.gz
     cd otp_src_20.3/
     ./configure --enable-hipe

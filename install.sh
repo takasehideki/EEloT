@@ -49,10 +49,10 @@ if [ $# -eq 1 ] && [ $1 == 'clean' ]; then
     fi
   elif [ "${OS}" == 'Raspbian' ]; then
     echo "Info: Uninstall Elixir"
-    sudo apt uninstall elixir
+    sudo apt remove elixir
   elif [ "${OS}" == 'Ubuntu' ]; then
     echo "Info: Uninstall Elixir"
-    sudo apt uninstall elixir
+    sudo apt-get uninstall elixir
   else
     echo "Error: Your platform ($(uname -a)) is not supported."
     exit 1

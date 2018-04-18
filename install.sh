@@ -109,7 +109,7 @@ if [ $# -eq 1 ] && [ $1 == 'source' ]; then
   echo "Info: Elixir will be built and installed on your ${OS} system from source."
   echo "Info: make install will be done by sudo."
 
-  git clone https://github.com/elixir-lang/elixir.git ../src
+  git clone https://github.com/elixir-lang/elixir.git ../elixir_src
   cd ../elixir_src
   git checkout refs/tags/v1.6.4
   echo "$ make clean test"

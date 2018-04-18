@@ -86,6 +86,7 @@ if [ $# -eq 0 ]; then
     echo "Info: Install Elixir"
     sudo apt update
     sudo apt install elixir
+    rm -f erlang-solutions.asc
 
   elif [ "${OS}" == 'Ubuntu' ]; then
     echo "Info: Add Erlang Solutions repo"
@@ -95,6 +96,7 @@ if [ $# -eq 0 ]; then
     #sudo apt-get install esl-erlang
     echo "Info: Install Elixir"
     sudo apt-get install elixir
+    rm -f erlang-solutions_1.0_all.deb
 
   else
     echo "Error: Your platform ($(uname -a)) is not supported."

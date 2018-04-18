@@ -1,5 +1,5 @@
 if [ $# -eq 1 ] && [ $1 == 'clean' ]; then
-  echo "Clean up beam files and git dirs."
+  echo "Info: Clean up beam files and git dirs."
   rm -f Elixir.*.beam
   rm -rf elixir_agg_csv
   rm -rf fukuokaex5_csv

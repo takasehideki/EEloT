@@ -91,8 +91,8 @@ if [ $# -eq 0 ]; then
     echo "Info: Add Erlang Solutions repo"
     wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
     sudo apt-get update
-    echo "Info: Install the Erlang/OTP platform and all of its applications"
-    sudo apt-get install esl-erlang
+    #echo "Info: Install the Erlang/OTP platform and all of its applications"
+    #sudo apt-get install esl-erlang
     echo "Info: Install Elixir"
     sudo apt-get install elixir
     rm -f erlang-solutions_1.0_all.deb
@@ -120,7 +120,8 @@ if [ $# -eq 1 ] && [ $1 == 'source' ]; then
   elif [ "${OS}" == 'Ubuntu' ]; then
     echo "Info: Install Erlang environment"
     sudo apt-get install erlang-nox erlang-dev
-    sudo apt-get install esl-erlang
+    wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
+    rm -f erlang-solutions_1.0_all.deb
 
   else
     echo "Error: Your platform ($(uname -a)) is not supported."

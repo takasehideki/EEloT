@@ -111,9 +111,6 @@ if [ $# -eq 1 ] && [ $1 == 'source' ]; then
   echo "Info: Elixir will be built and installed on your ${OS} system from source."
   echo "Warn: Some command will be done by sudo."
 
-  echo "$ mkdir -p /usr/local/src && cd /usr/local/src"
-  mkdir -p /usr/local/src && cd /usr/local/src/
- 
   if [ "${OS}" == 'Mac' ]; then
     echo ""
 
@@ -123,6 +120,8 @@ if [ $# -eq 1 ] && [ $1 == 'source' ]; then
 
     echo "Info: Install Erlang environment from source"
     sudo apt-get install libncurses5-dev libssl-dev
+    mkdir -p ../Elixir_Build/
+    cd ../Elixir_Build/
     wget http://erlang.org/download/otp_src_20.3.tar.gz
     tar xzvf otp_src_20.3.tar.gz
     cd otp_src_20.3/

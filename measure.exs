@@ -9,7 +9,7 @@ defmodule Measure do
     for [module,func,arg] <- @module_list do
       IO.puts "#{module}, #{func}, #{inspect(arg)}"
       IO.inspect {time, _} = :timer.tc(module, func, arg)
-      IO.puts "\ntime\: #{time/1000} ms"
+      IO.puts "\ntime\: #{time/(1000*1000)} second"
       IO.puts "----------"
     end
   end

@@ -65,7 +65,7 @@ fi
 #
 if [ $# -eq 0 ]; then
   echo "Info: Elixir will be installed on your ${OS} system by Package manager."
-  echo "Info: Some command will be done by sudo."
+  echo "Warn: command will be done by sudo."
 
   if [ "${OS}" == 'Mac' ]; then
     if which brew >/dev/null 2>&1; then
@@ -107,11 +107,26 @@ fi
 #
 if [ $# -eq 1 ] && [ $1 == 'source' ]; then
   echo "Info: Elixir will be built and installed on your ${OS} system from source."
-  echo "Info: make install will be done by sudo."
+  echo "Warn: Some command will be done by sudo."
+
+  if [ "${OS}" == 'Mac' ]; then
+    ;
+  elif [ "${OS}" == 'Raspbian' ]; then
+    echo "Info: Install Erlang environment"
+    sudo apt-get install erlang-nox erlang-dev
+
+  elif [ "${OS}" == 'Ubuntu' ]; then
+    echo "Info: Install Erlang environment"
+    sudo apt-get install erlang-nox erlang-dev
+
+  else
+    echo "Error: Your platform ($(uname -a)) is not supported."
+    exit 1
+  fi
 
   git clone https://github.com/elixir-lang/elixir.git ../elixir_src
   cd ../elixir_src
-  git checkout refs/tags/v1.6.4
+  git checkout refs/tags/v1.6.1
   echo "$ make clean test"
   make clean test
   echo "$ sudo make install"

@@ -114,14 +114,18 @@ if [ $# -eq 1 ] && [ $1 == 'source' ]; then
     echo ""
 
   elif [ "${OS}" == 'Raspbian' ]; then
-    echo "Info: Install Erlang environment"
+    echo "Info: Install Erlang environment by Package manager"
     sudo apt-get install erlang-nox erlang-dev
 
   elif [ "${OS}" == 'Ubuntu' ]; then
-    echo "Info: Install Erlang environment"
-    sudo apt-get install erlang-nox erlang-dev
-    wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
-    rm -f erlang-solutions_1.0_all.deb
+    echo "Info: Install Erlang environment from source"
+    wget http://erlang.org/download/otp_src_20.3.tar.gz ../
+    cd ../
+    tar xzvf otp_src_20.3.tar.gz
+    cd otp_src_20.3/
+    ./configure --enable-hipe
+    make
+    sudo make install
 
   else
     echo "Error: Your platform ($(uname -a)) is not supported."
@@ -130,7 +134,7 @@ if [ $# -eq 1 ] && [ $1 == 'source' ]; then
 
   git clone https://github.com/elixir-lang/elixir.git ../elixir_src
   cd ../elixir_src
-  git checkout refs/tags/v1.6.1
+  git checkout v1.6
   echo "$ make clean test"
   make clean test
   echo "$ sudo make install"

@@ -90,7 +90,7 @@ $ mix phoenix.server
 ```
 On another terminal or system in same network:
 ```
-$ wrk -t4 -c100 -d30S --timeout 2000 "http://<localhost or ServerIP>:4000/showdown"
+$ wrk -t4 -c100 -d30S --timeout 2000 "http://<localhost or BoardIP>:4000/showdown"
 ```
 
 
@@ -107,6 +107,7 @@ We have already tested and evaluated on the following IoT boards.
         - [Ubuntu Mate 16.04](https://ubuntu-mate.org/raspberry-pi/) (Ubuntu 16.04.2 LTS \n \l)
 - [ODROID-XU3](http://www.hardkernel.com/main/products/prdt_info.php?g_code=g140448267127)
     - Samsung Exynos5422 Cortex™-A15 2.0Ghz quad core and Cortex™-A7 quad core CPUs
+        - arm big.LITTE with a Heterogeneous Multi-Processing (HMP) solution and Dynamic Voltage and Frequecy Scaling (DVFS) support.
     - Mali-T628 MP6(OpenGL ES 3.0/2.0/1.1 and OpenCL 1.1 Full profile)
     - 2Gbyte LPDDR3 RAM at 933MHz (14.9GB/s memory bandwidth) PoP stackedQuad Core 1.2GHz Broadcom BCM2837 64bit CPU
     - 10/100Mbps Ethernet with RJ-45 Jack
@@ -129,6 +130,8 @@ We have already tested and evaluated on the following IoT boards.
 
 ## Evaluation results @2018-04-18
 
+Please PR if you have evaluated another IoT boards!!
+
 ### *.exs
 
 |Board|OS|leibniz_formula|fibonacci_simple|fibonacci_process|
@@ -136,12 +139,12 @@ We have already tested and evaluated on the following IoT boards.
 |RaspberryPi3|Raspbian| 118.174 | 9.516 | 15.320 |
 | |Ubuntu| 119.010 | 5.084 | 15.910 |
 |ODROID-XU3|Ubuntu| 50.749 | 7.858 | 6.958 |
-|ZYBO|Ubuntu| 159.950 | --- | 41.793 |
+|ZYBO|Ubuntu| 159.950 | *1 | 41.793 |
 |MacBook Pro|High Sierra| 7.584 | 2.260 | 3.065 |
 
 [unit: second]
 
-NOTE: ZYBO could not run fibonacci_simple due to memory limitation. (`eheap_alloc: Cannot allocate 220742620 bytes of memory (of type "old_heap").`)
+*1: ZYBO could not run fibonacci_simple due to memory limitation. (`eheap_alloc: Cannot allocate 220742620 bytes of memory (of type "old_heap").`)
 
 ### elixir_agg_csv
 
@@ -164,9 +167,9 @@ NOTE: ZYBO could not run fibonacci_simple due to memory limitation. (`eheap_allo
 | |Ubuntu| 74.47 | 1.28 | 242.29 |
 |ODROID-XU3|Ubuntu| 41.27 | 1.94 | 439.83 |
 |ZYBO|Ubuntu| 26.17 | 3.54 | 817.82 |
-|MacBook Pro|High Sierra| 241.57 | 0.416 | 171.33 |
+|MacBook Pro|High Sierra| 290.42 | 0.341 | 78.20 |
 
-
+NOTE: Evaluation of `wrk` has been done from MacBook Pro on same network (to `http://<BoardIP>:4000/`). ZYBO was connect via ethernet cable and others were via WiFi by relaying Buffalo WCR-1166DS router.
 
 ## License
 

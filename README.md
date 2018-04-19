@@ -104,7 +104,7 @@ We have already tested and evaluated on the following IoT boards.
     - BCM43438 wireless LAN and Bluetooth Low Energy (BLE) on board
     - Tested OS/distribution: 
         - [Raspbian sketch with Desktop 4.9](https://www.raspberrypi.org/downloads/raspbian/) (Raspbian GNU/Linux 9 \n \l)
-        - [Ubuntu Mate 16.04](https://ubuntu-mate.org/raspberry-pi/) (Ubuntu 16.04.2 LTS \n \l)
+        - [Ubuntu MATE 16.04](https://ubuntu-mate.org/raspberry-pi/) (Ubuntu 16.04.2 LTS \n \l)
 - [ODROID-XU3](http://www.hardkernel.com/main/products/prdt_info.php?g_code=g140448267127)
     - Samsung Exynos5422 Cortex™-A15 2.0Ghz quad core and Cortex™-A7 quad core CPUs
         - arm big.LITTE with a Heterogeneous Multi-Processing (HMP) solution and Dynamic Voltage and Frequecy Scaling (DVFS) support.
@@ -128,6 +128,16 @@ We have already tested and evaluated on the following IoT boards.
     - Intel Iris Graphics 550 1536 MB
     - macOS High Sierra 10.13.4
 
+### Summary of specification
+
+| Board | OS | Core | Memory | Network |
+|:---|:---|:---|:---|:---|
+| RaspberryPi3B | Raspbian Desktop 4.9 | 4x 1.2GHz Cortex-A53 | 1GB LPDDR2 | 150Mbps 2.4GHz 802.11b/g/n WiFi |
+|  | Ubuntu MATE 16.04 |  |  |  |
+| ODROID-XU3 | Ubuntu MATE 16.04 | 4x 2.0GHz Cortex-A15 + 4x 1.4GHz Cortex-A7 | 2GB LPDDR3 | 300Mbps 2.4GHz 802.11n/g/b WiFi |
+| ZYBO | Xillinux-2.0 | 2x 650MHz Cortex-A9 | 512MB DDR3 | 1GBit Ethernet PHY |
+| MacBook Pro | macOS High Sierra 10.13.4 | 2x 3.3GHz Core i7 | 16GB LPDDR3 | 433.3Mbps 5.0GHz 802.11ac/b/g/n WiFi |
+
 ## Evaluation results @2018-04-18
 
 Please PR if you have evaluated another IoT boards!!
@@ -136,7 +146,7 @@ Please PR if you have evaluated another IoT boards!!
 
 |Board|OS|leibniz_formula|fibonacci_simple|fibonacci_process|
 |:---|:---|---:|---:|---:|
-|RaspberryPi3|Raspbian| 118.174 | 9.516 | 15.320 |
+|RaspberryPi3B|Raspbian| 118.174 | 9.516 | 15.320 |
 | |Ubuntu| 119.010 | 5.084 | 15.910 |
 |ODROID-XU3|Ubuntu| 50.749 | 7.858 | 6.958 |
 |ZYBO|Ubuntu| 159.950 | *1 | 41.793 |
@@ -150,7 +160,7 @@ Please PR if you have evaluated another IoT boards!!
 
 |Board|OS|test_300000.csv|test_3_000_000.csv|
 |:---|:---|---:|---:|
-|RaspberryPi3|Raspbian| 9.317 | 82.720 |
+|RaspberryPi3B|Raspbian| 9.317 | 82.720 |
 | |Ubuntu| 9.294 | 82.880 |
 |ODROID-XU3|Ubuntu| 4.704 | 46.552 |
 |ZYBO|Ubuntu| 30.170 | 285.469 |
@@ -163,7 +173,7 @@ Please PR if you have evaluated another IoT boards!!
 
 |Board|OS|Throughput [req/s]|Latency [s]|Consistency [σ ms]|
 |:---|:---|---:|---:|---:|
-|RaspberryPi3|Raspbian| 80.05 | 1.21 | 231.84 |
+|RaspberryPi3B|Raspbian| 80.05 | 1.21 | 231.84 |
 | |Ubuntu| 74.47 | 1.28 | 242.29 |
 |ODROID-XU3|Ubuntu| 41.27 | 1.94 | 439.83 |
 |ZYBO|Ubuntu| 26.17 | 3.54 | 817.82 |

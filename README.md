@@ -106,10 +106,10 @@ We have already tested and evaluated on the following IoT boards.
         - [Raspbian sketch with Desktop 4.9](https://www.raspberrypi.org/downloads/raspbian/) (Raspbian GNU/Linux 9 \n \l)
         - [Ubuntu MATE 16.04](https://ubuntu-mate.org/raspberry-pi/) (Ubuntu 16.04.2 LTS \n \l)
 - [ODROID-XU3](http://www.hardkernel.com/main/products/prdt_info.php?g_code=g140448267127)
-    - Samsung Exynos5422 Cortex™-A15 2.0Ghz quad core and Cortex™-A7 quad core CPUs
+    - Samsung Exynos5422 Cortex™-A15 2.0Ghz quad core and Cortex™-A7 1.4Ghz quad core CPUs
         - arm big.LITTE with a Heterogeneous Multi-Processing (HMP) solution and Dynamic Voltage and Frequecy Scaling (DVFS) support.
     - Mali-T628 MP6(OpenGL ES 3.0/2.0/1.1 and OpenCL 1.1 Full profile)
-    - 2Gbyte LPDDR3 RAM at 933MHz (14.9GB/s memory bandwidth) PoP stackedQuad Core 1.2GHz Broadcom BCM2837 64bit CPU
+    - 2Gbyte LPDDR3 RAM at 933MHz (14.9GB/s memory bandwidth)
     - 10/100Mbps Ethernet with RJ-45 Jack
         - We use WLI-UC-G301N USB-WiFi adaptor to connect the network.
     - Tested OS/distribution: 

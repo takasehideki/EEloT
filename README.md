@@ -123,7 +123,7 @@ We have already tested and evaluated on the following IoT boards.
     - Tested OS/distribution: 
         - [Xillinux-2.0](http://xillybus.com/xillinux) (Ubuntu 16.04 LTS \n \l)
 - Reference: MacBook Pro (2016)
-    - Intel Core i7-6567U dual-core CPU @ 3.3 GHz 
+    - Intel Core i7-6567U dual-core CPU @ 3.3 GHz (4-threads)
     - 16GB 2133 MHz LPDDR3
     - Intel Iris Graphics 550 1536 MB
     - macOS High Sierra 10.13.4
@@ -136,7 +136,7 @@ We have already tested and evaluated on the following IoT boards.
 |  | Ubuntu MATE 16.04 |  |  |  |
 | ODROID-XU3 | Ubuntu MATE 16.04 | 4x 2.0GHz Cortex-A15 + 4x 1.4GHz Cortex-A7 | 2GB LPDDR3 | 300Mbps 2.4GHz 802.11n/g/b WiFi |
 | ZYBO | Xillinux-2.0 | 2x 650MHz Cortex-A9 | 512MB DDR3 | 1GBit Ethernet PHY |
-| MacBook Pro | macOS High Sierra 10.13.4 | 2x 3.3GHz Core i7 | 16GB LPDDR3 | 433.3Mbps 5.0GHz 802.11ac/b/g/n WiFi |
+| MacBook Pro | macOS High Sierra 10.13.4 | 2x 3.3GHz Core i7 (4-threads) | 16GB LPDDR3 | 433.3Mbps 5.0GHz 802.11ac/b/g/n WiFi |
 
 ## Evaluation results @2018-04-18
 

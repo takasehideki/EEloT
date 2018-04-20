@@ -188,5 +188,5 @@ Basically [MIT License](https://opensource.org/licenses/MIT), but the copyright 
 ## Related links
 
 - [fukuoka.ex#8](https://fukuokaex.connpass.com/event/85038/): Elixir User Group Meeting vol.8 at Fukuoka, Japan
-
+- [SlideShare Docs (in Japanese)](https://www.slideshare.net/takasehideki/elixiriot-biglittlezynq-94455098)
 

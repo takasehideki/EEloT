@@ -181,6 +181,12 @@ Please PR if you have evaluated another IoT boards!!
 
 NOTE: Evaluation of `wrk` has been done from MacBook Pro on same network (to `http://<BoardIP>:4000/`). ZYBO was connect via ethernet cable and others were via WiFi by relaying Buffalo WCR-1166DS router.
 
+## Changelog
+
+- 2018-04-18: Published to 1st evaluation results
+
+Please PR if you have evaluated another IoT boards!!
+
 ## License
 
 Basically [MIT License](https://opensource.org/licenses/MIT), but the copyright of `*.ex` files is attributed to developers of code. See the detail for comment out of code.

@@ -57,7 +57,7 @@ Currently this mode will install Erlang OTP 20.3 and Elixir 1.6.4.
 ```
 $ ./setup.sh
 ```
-This script setups the evaluation environment. It compiles *.exs to beam files, and pull apps and build them.
+This script setups the evaluation environment. It compiles *.ex to beam files, and pull apps and build them.
 
 
 #### Option
@@ -142,7 +142,7 @@ We have already tested and evaluated on the following IoT boards.
 
 Please PR if you have evaluated another IoT boards!!
 
-### *.exs
+### *.ex
 
 |Board|OS|leibniz_formula|fibonacci_simple|fibonacci_process|
 |:---|:---|---:|---:|---:|

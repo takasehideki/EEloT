@@ -170,7 +170,6 @@ Following table denotes the results when core frequency of RP3 and ODROID-XU3 is
 | |Ubuntu| 238.874 | 9.537 | 31.770 |
 |ODROID-XU3|Ubuntu| 152.185 | 15.646 | 19.896 |
 |ZYBO|Ubuntu| 162.853 | *1 | 41.779 |
-|MacBook Pro|High Sierra| 7.663 | 1.776 | 2.694 |
 
 [unit: second]
 

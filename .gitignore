@@ -1,3 +1,5 @@
+*.swp
+
 Elixir.*.beam
 
 elixir_agg_csv/

@@ -3,7 +3,7 @@ defmodule Measure do
                 [FibonacciSimple, :fib, [100000]],
                 [Scheduler, :run, [10, FibSolver, :fib, [37,37,37,37,37,37]]]]
 
-  def all do
+  def allex do
     IO.puts "Measurement start.\n"
     for [module,func,arg] <- @module_list do
       IO.puts "#{module}, #{func}, #{inspect(arg)}"

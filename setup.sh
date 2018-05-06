@@ -10,6 +10,7 @@ fi
 elixirc leibniz_formula.ex
 elixirc fibonacci_simple.ex
 elixirc fibonacci_process.ex
+elixirc measure.ex
 
 git clone https://github.com/enpedasi/elixir_agg_csv.git
 cd elixir_agg_csv/

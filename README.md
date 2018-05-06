@@ -6,7 +6,7 @@
 
 - install.sh: Automatically installation script for Elixir (and Erlang)
 - setup.sh: Compilation and `git pull` of benchmark apps
-- measure.exs: Measurement of performance (execution time) of CPU-bound apps
+- measure.ex: Measurement of performance (execution time) of CPU-bound apps
 
 ## Requirements
 
@@ -72,7 +72,7 @@ Clean up beam files and git directories.
 
 - *.ex
 ```
-$ elixir measure.exs
+$ elixir -e Measure.allex
 ```
 
 - elixir_agg_csv

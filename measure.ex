@@ -34,7 +34,7 @@ defmodule Measure do
   end
 
   @fm_arg [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
-  @fm_process [37,37,37,37,37,37,37,37,37,37]
+  @fm_process [30,30,30,30,30,30,30,30,30,30]
   def fibmulti do
     IO.puts "Measurement of FibSolver start.\n"
     IO.puts "arg,time[us]"

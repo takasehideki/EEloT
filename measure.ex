@@ -34,11 +34,12 @@ defmodule Measure do
   end
 
   @fm_arg [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  @fm_process [37,37,37,37,37,37,37,37,37,37]
   def fibmulti do
     IO.puts "Measurement of FibSolver start.\n"
     IO.puts "arg,time[us]"
     Enum.each(@fm_arg, fn(i) ->
-      {time, _} = :timer.tc(Scheduler, :run, [i, FibSolver, :fib, [37,37,37,37,37,37]])
+      {time, _} = :timer.tc(Scheduler, :run, [i, FibSolver, :fib, @fm_process])
       IO.puts "#{i},#{time}"
     end)
   end

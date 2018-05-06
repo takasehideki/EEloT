@@ -183,6 +183,7 @@ NOTE: Evaluation of `wrk` has been done from MacBook Pro on same network (to `ht
 ## Changelog
 
 - 2018-04-18: Published to 1st evaluation results
+- 2018-05-06: Added to CSV results (`./result_csv`) when varying argument of each apps
 
 Please PR if you have evaluated another IoT boards!!
 

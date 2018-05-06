@@ -63,6 +63,11 @@ This script setups the evaluation environment. It compiles *.ex to beam files, a
 #### Option
 
 ```
+$ ./setup.sh ex
+```
+Only perform the compilation of *.ex to beam files.
+
+```
 $ ./setup.sh clean
 ```
 Clean up beam files and git directories.

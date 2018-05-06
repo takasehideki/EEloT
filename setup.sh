@@ -1,10 +1,15 @@
-if [ $# -eq 1 ] && [ $1 == 'clean' ]; then
-  echo "Info: Clean up beam files and git dirs."
-  rm -f Elixir.*.beam
-  rm -rf elixir_agg_csv
-  rm -rf fukuokaex5_csv
-  rm -rf phoenix-showdown
-  exit 0
+if [ $# -eq 1 ]; then
+  if [ $1 == 'clean' ]; then
+    echo "Info: Clean up beam files and git dirs."
+    rm -f Elixir.*.beam
+    rm -rf elixir_agg_csv
+    rm -rf fukuokaex5_csv
+    rm -rf phoenix-showdown
+    exit 0
+  else
+    echo "Error: Invalid argument."
+    exit 0
+  fi
 fi
 
 elixirc leibniz_formula.ex

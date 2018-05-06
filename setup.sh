@@ -6,9 +6,16 @@ if [ $# -eq 1 ]; then
     rm -rf fukuokaex5_csv
     rm -rf phoenix-showdown
     exit 0
+  elif [ $1 == 'ex' ]; then
+    echo "Info: Compile .ex to beam files"
+    elixirc leibniz_formula.ex
+    elixirc fibonacci_simple.ex
+    elixirc fibonacci_process.ex
+    elixirc measure.ex
+    exit 0
   else
     echo "Error: Invalid argument."
-    exit 0
+    exit 1
   fi
 fi
 

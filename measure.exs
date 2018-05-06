@@ -1,8 +1,7 @@
 defmodule Measure do
-  @module_list [[LeibnizFormula, :calc, []], 
+  @module_list [[LeibnizFormula, :calc, [100_000_000]],
                 [FibonacciSimple, :fib, [100000]],
                 [Scheduler, :run, [10, FibSolver, :fib, [37,37,37,37,37,37]]]]
-  #@module_list [[Fibonacci, :fib, [100000]]]
 
   def start do
     IO.puts "Measurement start.\n"

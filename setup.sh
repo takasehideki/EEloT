@@ -34,7 +34,7 @@ git clone https://github.com/enpedasi/fukuokaex5_csv.git
 7z x fukuokaex5_csv/test_300000.7z -oelixir_agg_csv/
 7z x fukuokaex5_csv/test_3_000_000.7z -oelixir_agg_csv/
 
-git clone https://github.com/mroth/phoenix-showdown.git
+git clone https://github.com/takasehideki/phoenix-showdown.git
 cd phoenix-showdown/phoenix/benchmarker
 mix deps.get
 mix deps.compile

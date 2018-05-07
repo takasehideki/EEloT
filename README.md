@@ -203,6 +203,7 @@ NOTE: Evaluation of `wrk` has been done from MacBook Pro on same network (to `ht
 - 2018-04-18: Published to 1st evaluation results
 - 2018-05-06: Changed to execution method of *.ex and updated to evaluation result
 - 2018-05-06: Added to evaluation results of *.ex when DVFS to RP3 and ODROID-XU3 were applied
+- 2018-05-06: Added to CSV results (`./result_csv`) when varying argument of each apps
 
 Please PR if you have evaluated another IoT boards!!
 

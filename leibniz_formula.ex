@@ -7,6 +7,6 @@ defmodule LeibnizFormula do
   def calc(n) do
     s = 0..n
         |> Enum.reduce( 0, fn (x, acc) -> acc + (:math.pow(-1, x) / (2*x + 1)) end )
-    IO.puts s*4
+    #IO.puts s*4
   end
 end

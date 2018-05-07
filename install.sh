@@ -119,7 +119,7 @@ if [ $# -eq 1 ] && [ $1 == 'source' ]; then
     sudo apt-get remove erlang-nox erlang-dev
 
     echo "Info: Install Erlang environment from source"
-    sudo apt-get install libncurses5-dev libssl-dev
+    sudo apt-get install m4 libncurses5-dev libssl-dev
     mkdir -p ../Elixir_Build/
     cd ../Elixir_Build/
     wget http://erlang.org/download/otp_src_20.3.tar.gz

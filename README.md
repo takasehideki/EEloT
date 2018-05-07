@@ -188,13 +188,13 @@ Following table denotes the results when core frequency of RP3 and ODROID-XU3 is
 
 ### phoenix-showdown
 
-|Board|OS|Throughput [req/s]|Latency [s]|Consistency [σ ms]|
+|Board|OS|Throughput [req/s]|Latency [ms]|Consistency [σ ms]|
 |:---|:---|---:|---:|---:|
-|RaspberryPi3B|Raspbian| 81.21 | 1.18 | 226.35 |
-| |Ubuntu| 68.38 | 1.37 | 273.56 |
-|ODROID-XU3|Ubuntu| 85.23 | 0.994 | 657.29 |
-|ZYBO|Ubuntu| 25.31 | 3.60 | 998.42 |
-|MacBook Pro|High Sierra| 290.42 | 0.341 | 78.20 |
+|RaspberryPi3B|Raspbian| 785.25 | 351.47 | 771.85 |
+| |Ubuntu| 878.89 | 113.30 | 31.68 |
+|ODROID-XU3|Ubuntu| 859.60 | 112.67 | 25.82 |
+|ZYBO|Ubuntu| 459.28 | 216.72 | 83.10 |
+|MacBook Pro|High Sierra| 2910.18 | 38.85 | 36.93 |
 
 NOTE: Evaluation of `wrk` has been done from MacBook Pro on same network (to `http://<BoardIP>:4000/`). ZYBO was connect via ethernet cable and others were via WiFi by relaying Buffalo WCR-1166DS router.
 

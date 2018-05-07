@@ -142,7 +142,7 @@ We have already tested and evaluated on the following IoT boards.
 | ZYBO | Xillinux-2.0 | 2x 650MHz Cortex-A9 | 512MB DDR3 | 1GBit Ethernet PHY |
 | MacBook Pro | macOS High Sierra 10.13.4 | 2x 3.3GHz Core i7 (4-threads) | 16GB LPDDR3 | 433.3Mbps 5.0GHz 802.11ac/b/g/n WiFi |
 
-## Evaluation results @2018-05-06
+## Evaluation results @2018-05-07
 
 Please PR if you have evaluated another IoT boards!!
 
@@ -150,26 +150,26 @@ Please PR if you have evaluated another IoT boards!!
 
 |Board|OS|leibniz_formula|fibonacci_simple|fibonacci_process|
 |:---|:---|---:|---:|---:|
-|RaspberryPi3B|Raspbian| 118.192 | 11.182 | 15.076 |
-| |Ubuntu| 119.976 | 4.996 | 15.872 |
-|ODROID-XU3|Ubuntu| 47,004 | 6.330 | 7.524 |
-|ZYBO|Ubuntu| 162.853 | *1 | 41.779 |
+|RaspberryPi3B|Raspbian| 114.470 | 14.329 | 14.474 |
+| |Ubuntu| 118.107 | 5.050 | 15.888 |
+|ODROID-XU3|Ubuntu| 48.475 | 6.816 | 6.943 |
+|ZYBO|Ubuntu| 161.342 | *1 | 41.789 |
 |MacBook Pro|High Sierra| 7.663 | 1.776 | 2.694 |
 
 [unit: second]
 
 *1: ZYBO could not run fibonacci_simple due to memory limitation. (`eheap_alloc: Cannot allocate 220742620 bytes of memory (of type "old_heap").`)
 
-#### [Reference]: applying to DVFS for *.ex apps
+#### [NOTE]: applying to DVFS for *.ex apps
 
 Following table denotes the results when core frequency of RP3 and ODROID-XU3 is set to 600MHz by the DVFS technology.
 
 |Board|OS|leibniz_formula|fibonacci_simple|fibonacci_process|
 |:---|:---|---:|---:|---:|
-|RaspberryPi3B|Raspbian| 238.554 | 13.888 | 30.113 |
-| |Ubuntu| 238.874 | 9.537 | 31.770 |
-|ODROID-XU3|Ubuntu| 152.185 | 15.646 | 19.896 |
-|ZYBO|Ubuntu| 162.853 | *1 | 41.779 |
+|RaspberryPi3B|Raspbian| 226.617 | 17.529 | 28.906 |
+| |Ubuntu| 240.612 | 9.249 | 31.856 |
+|ODROID-XU3|Ubuntu| 160.609 | 15.204 | 19.737 |
+|ZYBO|Ubuntu| 161.342 | *1 | 41.789 |
 
 [unit: second]
 
@@ -177,10 +177,10 @@ Following table denotes the results when core frequency of RP3 and ODROID-XU3 is
 
 |Board|OS|test_300000.csv|test_3_000_000.csv|
 |:---|:---|---:|---:|
-|RaspberryPi3B|Raspbian| 9.317 | 82.720 |
-| |Ubuntu| 9.294 | 82.880 |
-|ODROID-XU3|Ubuntu| 4.704 | 46.552 |
-|ZYBO|Ubuntu| 30.170 | 285.469 |
+|RaspberryPi3B|Raspbian| 11.128 | 81.776 |
+| |Ubuntu| 9.326 | 82.487 |
+|ODROID-XU3|Ubuntu| 4.828 | 46.956 |
+|ZYBO|Ubuntu| 34.380 | 284.712 |
 |MacBook Pro|High Sierra| 1.958 | 22.798 |
 
 [unit: second]
@@ -190,10 +190,10 @@ Following table denotes the results when core frequency of RP3 and ODROID-XU3 is
 
 |Board|OS|Throughput [req/s]|Latency [s]|Consistency [σ ms]|
 |:---|:---|---:|---:|---:|
-|RaspberryPi3B|Raspbian| 80.05 | 1.21 | 231.84 |
-| |Ubuntu| 74.47 | 1.28 | 242.29 |
-|ODROID-XU3|Ubuntu| 41.27 | 1.94 | 439.83 |
-|ZYBO|Ubuntu| 26.17 | 3.54 | 817.82 |
+|RaspberryPi3B|Raspbian| 81.21 | 1.18 | 226.35 |
+| |Ubuntu| 68.38 | 1.37 | 273.56 |
+|ODROID-XU3|Ubuntu| 85.23 | 0.994 | 657.29 |
+|ZYBO|Ubuntu| 25.31 | 3.60 | 998.42 |
 |MacBook Pro|High Sierra| 290.42 | 0.341 | 78.20 |
 
 NOTE: Evaluation of `wrk` has been done from MacBook Pro on same network (to `http://<BoardIP>:4000/`). ZYBO was connect via ethernet cable and others were via WiFi by relaying Buffalo WCR-1166DS router.
@@ -201,9 +201,10 @@ NOTE: Evaluation of `wrk` has been done from MacBook Pro on same network (to `ht
 ## Changelog
 
 - 2018-04-18: Published to 1st evaluation results
-- 2018-05-06: Changed to execution method of *.ex and updated to evaluation result
+- 2018-05-06: Changed to execution method of *.ex
 - 2018-05-06: Added to evaluation results of *.ex when DVFS to RP3 and ODROID-XU3 were applied
 - 2018-05-06: Added to CSV results (`./result_csv`) when varying argument of each apps
+- 2018-05-07: Updated to evaluation result
 
 Please PR if you have evaluated another IoT boards!!
 

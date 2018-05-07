@@ -63,6 +63,11 @@ This script setups the evaluation environment. It compiles *.ex to beam files, a
 #### Option
 
 ```
+$ ./setup.sh ex
+```
+Only perform the compilation of *.ex to beam files.
+
+```
 $ ./setup.sh clean
 ```
 Clean up beam files and git directories.
@@ -137,7 +142,7 @@ We have already tested and evaluated on the following IoT boards.
 | ZYBO | Xillinux-2.0 | 2x 650MHz Cortex-A9 | 512MB DDR3 | 1GBit Ethernet PHY |
 | MacBook Pro | macOS High Sierra 10.13.4 | 2x 3.3GHz Core i7 (4-threads) | 16GB LPDDR3 | 433.3Mbps 5.0GHz 802.11ac/b/g/n WiFi |
 
-## Evaluation results @2018-04-18
+## Evaluation results @2018-05-06
 
 Please PR if you have evaluated another IoT boards!!
 
@@ -145,15 +150,28 @@ Please PR if you have evaluated another IoT boards!!
 
 |Board|OS|leibniz_formula|fibonacci_simple|fibonacci_process|
 |:---|:---|---:|---:|---:|
-|RaspberryPi3B|Raspbian| 118.174 | 9.516 | 15.320 |
-| |Ubuntu| 119.010 | 5.084 | 15.910 |
-|ODROID-XU3|Ubuntu| 50.749 | 7.858 | 6.958 |
-|ZYBO|Ubuntu| 159.950 | *1 | 41.793 |
-|MacBook Pro|High Sierra| 7.584 | 2.260 | 3.065 |
+|RaspberryPi3B|Raspbian| 118.192 | 11.182 | 15.076 |
+| |Ubuntu| 119.976 | 4.996 | 15.872 |
+|ODROID-XU3|Ubuntu| 47,004 | 6.330 | 7.524 |
+|ZYBO|Ubuntu| 162.853 | *1 | 41.779 |
+|MacBook Pro|High Sierra| 7.663 | 1.776 | 2.694 |
 
 [unit: second]
 
 *1: ZYBO could not run fibonacci_simple due to memory limitation. (`eheap_alloc: Cannot allocate 220742620 bytes of memory (of type "old_heap").`)
+
+#### [Reference]: applying to DVFS for *.ex apps
+
+Following table denotes the results when core frequency of RP3 and ODROID-XU3 is set to 600MHz by the DVFS technology.
+
+|Board|OS|leibniz_formula|fibonacci_simple|fibonacci_process|
+|:---|:---|---:|---:|---:|
+|RaspberryPi3B|Raspbian| 238.554 | 13.888 | 30.113 |
+| |Ubuntu| 238.874 | 9.537 | 31.770 |
+|ODROID-XU3|Ubuntu| 152.185 | 15.646 | 19.896 |
+|ZYBO|Ubuntu| 162.853 | *1 | 41.779 |
+
+[unit: second]
 
 ### elixir_agg_csv
 
@@ -183,6 +201,8 @@ NOTE: Evaluation of `wrk` has been done from MacBook Pro on same network (to `ht
 ## Changelog
 
 - 2018-04-18: Published to 1st evaluation results
+- 2018-05-06: Changed to execution method of *.ex and updated to evaluation result
+- 2018-05-06: Added to evaluation results of *.ex when DVFS to RP3 and ODROID-XU3 were applied
 - 2018-05-06: Added to CSV results (`./result_csv`) when varying argument of each apps
 
 Please PR if you have evaluated another IoT boards!!

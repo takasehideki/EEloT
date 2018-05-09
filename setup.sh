@@ -8,6 +8,7 @@ if [ $# -eq 1 ]; then
     exit 0
   elif [ $1 == 'ex' ]; then
     echo "Info: Compile .ex to beam files"
+    rm -f Elixir.*.beam
     elixirc leibniz_formula.ex
     elixirc fibonacci_simple.ex
     elixirc fibonacci_process.ex

@@ -140,7 +140,7 @@ if [ $# -eq 1 ] && [ $1 == 'source' ]; then
 
   git clone https://github.com/elixir-lang/elixir.git
   cd elixir/
-  git checkout v1.6
+  git checkout v1.6.5
   echo "$ make clean test"
   make clean test
   echo "$ sudo make install"
